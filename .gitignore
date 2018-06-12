@@ -1,3 +1,6 @@
+#file containing secret keys - DO NOT COMMIT
+secret_keys.yml
+
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
 # Compiled class file

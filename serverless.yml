@@ -5,7 +5,8 @@ frameworkVersion: ">=1.2.0 <2.0.0"
 provider:
   name: aws
   runtime: java8
-  
+  environment:
+      MET_API_KEY: ${file(./secret_keys.yml):metOfficeAPIKey}
 package:
   artifact: build/distributions/awshackbackend.zip
 
@@ -16,3 +17,5 @@ functions:
       - http:
           path: ping
           method: get
+  getChallenge:
+   handler: com.serverless.
