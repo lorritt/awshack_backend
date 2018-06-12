@@ -7,6 +7,7 @@ provider:
   runtime: java8
   environment:
       MET_API_KEY: ${file(./secret_keys.yml):metOfficeAPIKey}
+      TFL_API_ID: ${file(./secret_keys.yml):tflAPIID}
       TFL_API_KEY: ${file(./secret_keys.yml):tflAPIKey}
 package:
   artifact: build/distributions/awshackbackend.zip
