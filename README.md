@@ -1,17 +1,12 @@
 <!--
-title: AWS Simple HTTP Endpoint example in Java
-description: This example demonstrates how to setup a simple HTTP GET endpoint using Java. Once you ping it, it will reply with the current time.
-layout: Doc
--->
-# Simple HTTP Endpoint Example
+title: AWS Hack 2018 Entry: Good Choice Gamification - backend
 
-This example demonstrates how to setup a simple HTTP GET endpoint using Java. Once you ping it, it will reply with the current time.
+-->
+# AWS Hack 2018 Entr
+
 
 [Jackson](https://github.com/FasterXML/jackson) is used to serialize objects to JSON.
 
-## Use Cases
-
-- Wrapping an existing internal or external endpoint/service
 
 ## Build
 
@@ -47,33 +42,6 @@ BUILD SUCCESSFUL
 
 Total time: 8.195 secs
 ```
-
-### Maven
-
-In order to build using Maven simply run
-
-```bash
-mvn package
-```
-
-Note: you can install Maven with
-
-1. [sdkman](http://sdkman.io/) using `sdk install maven` (yes, use as default)
-2. `sudo apt-get install mvn`
-3. `brew install maven`
-
-If you use Maven to build, then in `serverless.yml` you have to replace
-
-```yaml
-package:
-  artifact: build/distributions/aws-java-simple-http-endpoint.zip
-```
-with
-```yaml
-package:
-  artifact: target/aws-java-simple-http-endpoint.jar
-```
-before deploying.
 
 ## Deploy
 
