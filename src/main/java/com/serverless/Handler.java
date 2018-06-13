@@ -22,6 +22,8 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
 	@Override
 	public ApiGatewayResponse handleRequest(Map<String, Object> input, Context context) {
 		LOG.info("received: " + input);
+        String tmpLat = "51.517187";
+        String tmpLong = "-0.104444";
 
         Response responseBody = new Response(getTFLAirQuality());
         Map<String, String> headers = new HashMap<>();
