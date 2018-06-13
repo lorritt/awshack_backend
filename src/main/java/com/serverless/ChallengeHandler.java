@@ -1,9 +1,14 @@
 package com.serverless;
 
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import com.serverless.domain.Challenge;
+import com.serverless.services.GenerateChallange;
 import com.serverless.services.MetService;
 import com.serverless.services.TflService;
 import org.apache.log4j.Logger;
@@ -25,16 +30,33 @@ public class ChallengeHandler implements RequestHandler<Map<String, Object>, Api
         String metString = MetService.getMetOfficeHourlyForcast(tmpLat,tmpLong);
 
 
+        Challenge challenge = GenerateChallange.genarate();
+        ObjectMapper mapperObj = new ObjectMapper();
 
-        Response responseBody = new Response(tflString + " " + metString);
+        try {
+            // get Employee object as a json string
+            String jsonStr = mapperObj.writeValueAsString(challenge);
+            System.out.println(jsonStr);
+
+
+        Response responseBody = new Response(jsonStr);
         Map<String, String> headers = new HashMap<>();
         headers.put("X-Powered-By", "AWS Lambda & Serverless");
         headers.put("Content-Type", "application/json");
 
         return ApiGatewayResponse.builder()
                 .setStatusCode(200)
-                .setObjectBody(responseBody)
+                .setRawBody(jsonStr)
                 .setHeaders(headers)
+                .build();
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return ApiGatewayResponse.builder()
+                .setStatusCode(400)
                 .build();
 	}
 }

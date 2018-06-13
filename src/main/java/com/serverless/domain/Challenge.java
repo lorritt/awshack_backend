@@ -3,12 +3,19 @@ package com.serverless.domain;
 import com.serverless.domain.Enum.Activity;
 import com.serverless.domain.Enum.Difficulty;
 
-public class Challange {
+public class Challenge {
 
     public String name;
     public Activity activity;
     public Difficulty difficulty;
     public String description;
+
+    public Challenge(String name, Activity activity, Difficulty difficulty, String description) {
+        this.name = name;
+        this.activity = activity;
+        this.difficulty = difficulty;
+        this.description = description;
+    }
 
     public void setDescription(String description) {
         this.description = description;
