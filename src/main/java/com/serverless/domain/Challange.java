@@ -8,7 +8,15 @@ public class Challange {
     public String name;
     public Activity activity;
     public Diffiuclty difficulty;
+    public String description;
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 
     public String getName() {
         return name;
