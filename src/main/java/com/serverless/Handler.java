@@ -22,9 +22,10 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
         String tmpLong = "-0.104444";
 
         String tflString = TflService.getTFLAirQuality();
-        String metString = MetService.getMetOfficeHourlyForcast("","");
+        String metString = MetService.getMetOfficeHourlyForcast(tmpLat,tmpLong);
 
-        Response responseBody = new Response(TflService.getTFLAirQuality());
+
+        Response responseBody = new Response(tflString + " " + metString);
         Map<String, String> headers = new HashMap<>();
         headers.put("X-Powered-By", "AWS Lambda & Serverless");
         headers.put("Content-Type", "application/json");
