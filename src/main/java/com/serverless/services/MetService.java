@@ -18,7 +18,9 @@ public class MetService {
 
         try {
             //TODO make this work jordon
-            url = new URL("https://pwms.datapoint.metoffice.gov.uk/points/v1/pwms-hourly-spot-forecast?latitude=" + lat + "&longitude=" + lon);
+//            url = new URL("https://pwms.datapoint.metoffice.gov.uk/points/v1/pwms-hourly-spot-forecast?latitude=" + lat + "&longitude=" + lon);
+
+            url = new URL("https://pwms.datapoint.metoffice.gov.uk/points/v1/pwms-hourly-spot-forecast?latitude=51.517187&longitude=-0.104444");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestProperty("api-key",System.getenv("metOfficeAPIKey"));
             con.setRequestMethod("GET");

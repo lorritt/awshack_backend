@@ -1,6 +1,6 @@
 package com.serverless.domain.Enum;
 
-public enum Diffiuclty {
+public enum Difficulty {
 
     EASY,
     MEDIUM,

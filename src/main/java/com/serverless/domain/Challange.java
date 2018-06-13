@@ -1,13 +1,13 @@
 package com.serverless.domain;
 
 import com.serverless.domain.Enum.Activity;
-import com.serverless.domain.Enum.Diffiuclty;
+import com.serverless.domain.Enum.Difficulty;
 
 public class Challange {
 
     public String name;
     public Activity activity;
-    public Diffiuclty difficulty;
+    public Difficulty difficulty;
     public String description;
 
     public void setDescription(String description) {
@@ -34,11 +34,11 @@ public class Challange {
         this.activity = activity;
     }
 
-    public Diffiuclty getDifficulty() {
+    public Difficulty getDifficulty() {
         return difficulty;
     }
 
-    public void setDifficulty(Diffiuclty difficulty) {
+    public void setDifficulty(Difficulty difficulty) {
         this.difficulty = difficulty;
     }
 }
