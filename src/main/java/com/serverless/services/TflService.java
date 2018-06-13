@@ -35,12 +35,16 @@ public class  TflService {
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
+            return "Could not obtain Air Quality data";
+
         } catch (ProtocolException e) {
             e.printStackTrace();
+            return "Could not obtain Air Quality data";
+
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
             return "Could not obtain Air Quality data";
+
         }
     }
 }

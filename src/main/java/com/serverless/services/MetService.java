@@ -38,12 +38,16 @@ public class MetService {
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
+            return "Could not obtain Hourly Forecast";
+
         } catch (ProtocolException e) {
             e.printStackTrace();
+            return "Could not obtain Hourly Forecast";
+
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
             return "Could not obtain Hourly Forecast";
+
         }
     }
 }
