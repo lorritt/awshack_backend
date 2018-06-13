@@ -1,18 +1,15 @@
 package com.serverless;
 
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.serverless.util.ParameterStringBuilder;
 import org.apache.log4j.Logger;
 
 import com.amazonaws.services.lambda.runtime.Context;
