@@ -19,6 +19,30 @@ functions:
       - http:
           path: getFull
           method: get
+          CorsRules:
+            - AllowedHeaders:
+                - "*"
+              AllowedMethods:
+                - "POST"
+                - "PUT"
+                - "GET"
+                - "DELETE"
+              AllowedOrigins:
+                - "*"
+              ExposedHeaders:
+                - "ETag"
       - http:
           path: getTextual
           method: get
+          CorsRules:
+            - AllowedHeaders:
+                - "*"
+              AllowedMethods:
+                - "POST"
+                - "PUT"
+                - "GET"
+                - "DELETE"
+              AllowedOrigins:
+                - "*"
+              ExposedHeaders:
+                - "ETag"
