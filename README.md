@@ -99,7 +99,7 @@ The expected result should be similar to:
 }
 --------------------------------------------------------------------
 START RequestId: XXXXXXX Version: $LATEST
-2017-01-04 23:44:37 <XXXXXXX> INFO  com.serverless.Handler:18 - received: {}
+2017-01-04 23:44:37 <XXXXXXX> INFO  com.serverless.ChallengeHandler:18 - received: {}
 END RequestId: XXXXXXX
 REPORT RequestId: XXXXXXX	Duration: 0.51 ms	Billed Duration: 100 ms 	Memory Size: 1024 MB	Max Memory Used: 53 MB
 ```
