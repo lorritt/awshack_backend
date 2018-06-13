@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
 import com.serverless.domain.Challenge;
 import com.serverless.services.GenerateChallange;
 import com.serverless.services.MetService;
