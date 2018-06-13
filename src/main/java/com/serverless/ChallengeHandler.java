@@ -15,9 +15,9 @@ import org.apache.log4j.Logger;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 
-public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayResponse> {
+public class ChallengeHandler implements RequestHandler<Map<String, Object>, ApiGatewayResponse> {
 
-	private static final Logger LOG = Logger.getLogger(Handler.class);
+	private static final Logger LOG = Logger.getLogger(ChallengeHandler.class);
 
 	@Override
 	public ApiGatewayResponse handleRequest(Map<String, Object> input, Context context) {
@@ -62,11 +62,12 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
+            return "Could not obtain Air Quality data";
         } catch (ProtocolException e) {
             e.printStackTrace();
+            return "Could not obtain Air Quality data";
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
             return "Could not obtain Air Quality data";
         }
     }
@@ -97,11 +98,12 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
+            return "Could not obtain Hourly Forecast";
         } catch (ProtocolException e) {
             e.printStackTrace();
+            return "Could not obtain Hourly Forecast";
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
             return "Could not obtain Hourly Forecast";
         }
     }

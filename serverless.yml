@@ -13,10 +13,12 @@ package:
   artifact: build/distributions/awshackbackend.zip
 
 functions:
-  currentTime:
-    handler: com.serverless.Handler
+  challengeHandler:
+    handler: com.serverless.ChallengeHandler
     events:
       - http:
-          path: ping
+          path: getFull
           method: get
-
+      - http:
+          path: getTextual
+          method: get
