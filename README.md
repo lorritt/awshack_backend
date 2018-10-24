@@ -2,7 +2,7 @@
 title: AWS Hack 2018 Entry: Good Choice Gamification - backend
 
 -->
-# AWS Hack 2018 Entr
+# AWS Hack 2018 Entry
 
 
 [Jackson](https://github.com/FasterXML/jackson) is used to serialize objects to JSON.
